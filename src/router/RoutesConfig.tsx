@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Home } from '../pages/Home'
+import LandingPage from '../pages/LandingPage'
 
 interface Route {
   name: string
@@ -15,7 +16,7 @@ export const routesConfig: Route[] = [
   {
     name: 'home',
     path: '/',
-    component: <Home />,
+    component: <LandingPage />,
     hasFooter: true
   }
 ]

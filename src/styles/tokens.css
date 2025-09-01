@@ -1,0 +1,170 @@
+/* Design System Tokens - Industrial Vintage Premium */
+:root {
+    /* Core Brand Colors */
+    --color-red: #D11F27;
+    --color-red-dark: #A8181F;
+    --color-red-tint: #F8D3D5;
+
+    --color-blue: #003DA5;
+    --color-blue-dark: #002C74;
+    --color-blue-tint: #D0DEF4;
+
+    --color-white: #FFFFFF;
+    --color-offwhite: #F8F9FA;
+
+    --color-gold: #C5A85D;
+    --color-gold-dark: #9F8643;
+    --color-gold-tint: #EFE5CE;
+
+    --color-metal: #BFC3C7;
+    --color-metal-dark: #8E9295;
+    --color-metal-mid: #D7DADD;
+    --color-metal-tint: #EEF0F2;
+
+    /* Feedback */
+    --color-success: #2E7D32;
+    --color-warning: #C77800;
+    --color-error: #C62828;
+    --color-info: #1565C0;
+
+    /* Surfaces */
+    --surface-0: #FFFFFF;
+    --surface-1: #F3F4F6;
+    --surface-2: #E6E8EA;
+    --surface-3: #D9DCDE;
+    --surface-dark: #141619;
+    --surface-dark-alt: #1E2226;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 4px 14px rgba(0, 0, 0, 0.18);
+    --shadow-inset: inset 0 1px 2px rgba(255, 255, 255, 0.2), inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+
+    /* Radius */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 10px;
+    --radius-pill: 999px;
+    --radius-bevel: 0;
+
+    /* Typography Families */
+    --font-title: 'Oswald', sans-serif;
+    --font-body: 'Roboto', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* Type Scale */
+    --fs-2xs: 0.6875rem;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.375rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2.25rem;
+    --fs-3xl: 3rem;
+    --fs-4xl: 3.75rem;
+
+    --lh-tight: 1.1;
+    --lh-snug: 1.25;
+    --lh-normal: 1.45;
+    --lh-relaxed: 1.6;
+
+    /* Spacing */
+    --sp-1: 2px;
+    --sp-2: 4px;
+    --sp-3: 6px;
+    --sp-4: 8px;
+    --sp-5: 12px;
+    --sp-6: 16px;
+    --sp-7: 20px;
+    --sp-8: 24px;
+    --sp-9: 32px;
+    --sp-10: 40px;
+    --sp-11: 48px;
+    --sp-12: 64px;
+    --sp-13: 80px;
+    --sp-14: 96px;
+
+    /* Motion */
+    --anim-fast: 120ms;
+    --anim-base: 200ms;
+    --anim-slow: 320ms;
+    --easing-out: cubic-bezier(.16, .84, .44, 1);
+    --easing-in: cubic-bezier(.76, 0, .24, 1);
+
+    /* Borders */
+    --border-gold: 1px solid var(--color-gold);
+    --border-metal: 1px solid var(--color-metal);
+    --border-strong: 2px solid var(--color-blue);
+}
+
+.dark {
+    --surface-0: #121416;
+    --surface-1: #1A1D20;
+    --surface-2: #24282C;
+    --surface-3: #2F3439;
+    --color-metal: #9BA0A3;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.55);
+}
+
+/* Utility / Structural Helpers */
+.underline-accent {
+    position: relative;
+    display: inline-block;
+    padding-bottom: .4rem;
+}
+
+.underline-accent::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 38px;
+    height: 4px;
+    background: var(--color-red);
+    border-radius: 2px;
+}
+
+.panel-metal {
+    background: var(--surface-1);
+    border: var(--border-metal);
+    box-shadow: var(--shadow-inset);
+    border-radius: var(--radius-md);
+}
+
+.badge-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--color-gold);
+    color: #1E2226;
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    letter-spacing: .05em;
+}
+
+/* Texture (light subtle noise) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 25% 25%, rgba(0, 0, 0, .04), transparent 60%), radial-gradient(circle at 75% 75%, rgba(0, 0, 0, .04), transparent 60%);
+    mix-blend-mode: multiply;
+    opacity: .35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0ms !important;
+    }
+}

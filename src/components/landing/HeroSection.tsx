@@ -37,9 +37,11 @@ export default function HeroSection() {
                 <div className="mx-auto max-w-3xl">
                     {/* LOGO BLOCK like ENGINE */}
                     <div className="mx-auto inline-flex items-center rounded-sm px-4 py-3" style={{ background: COLORS.red }}>
+                        {/* big emoji */}
+                        <span className="text-8xl">😱</span>
                         <span className="text-2xl font-extrabold tracking-wider text-white">J'AI TOUT PERDU</span>
                     </div>
-                    <p className="mt-3 text-xs tracking-widest text-gray-600">F U E L  T H E  D A T A</p>
+                    <p className="mt-3 text-xs tracking-widest text-gray-600">24h/24 et 7j/7</p>
                 </div>
             </div>
 
@@ -50,13 +52,12 @@ export default function HeroSection() {
             <div className="px-6 pb-16 pt-12 text-center text-white" style={{ background: COLORS.blue }}>
                 <div className="mx-auto max-w-3xl">
                     <h1 className="text-4xl font-extrabold tracking-wider md:text-5xl" style={{ letterSpacing: "0.06em" }}>
-                        PURE ORGANIC DATA RECOVERY
+                        RETROUVER VOS DONNÉES
                     </h1>
                     <p className="mx-auto mt-4 max-w-xl text-blue-100">
                         Diagnostic gratuit sous 24h. Récupération rapide et sécurisée partout en France.
                     </p>
                     <div className="mt-6">
-                        <Laurels />
                     </div>
                     <div className="mt-8">
                         <a
